@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ffd1dc 0%, #ffe5e5 50%, #fff0f5 100%);
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Add cherry blossom petals */
+.petal {
+    position: fixed;
+    pointer-events: none;
+    z-index: 100;
+    animation: falling linear infinite;
+}
+
+@keyframes falling {
+    0% {
+        transform: translate(var(--start-x), -10%);
+    }
+    100% {
+        transform: translate(var(--end-x), 110%) rotate(360deg);
+    }
+}
+
+/* Update wish card styles - remove hover effects */
+.wish-card {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    overflow: hidden;
+    min-height: 80px;
+}
+
+.wish-card-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.wish-card-image {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wish-text {
+    flex: 1;
+    line-height: 1.5;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wish-card:not(.expanded) .wish-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.wish-card.expanded .wish-text {
+    display: block;
+    max-height: none;
+}
+
+.wish-card.expanded {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.wish-card:not(.expanded) .wish-card-image {
+    width: 60px;
+    height: 60px;
+    opacity: 1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.wish-card.expanded .wish-card-image {
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.wish-text {
+    flex: 1;
+    line-height: 1.5;
+}
+
+.wish-card:not(.expanded) .wish-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Update other text colors for better visibility */
+h1, h2 {
+    color: #d4145a;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.music-control button {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.intro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    margin-bottom: 30px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6;
+    }
+}
+
+.cake {
+    font-size: 100px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.wishes-section {
+    padding: 50px 0;
+}
+
+.wishes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.birthday-image {
+    margin: 30px 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+.birthday-image img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.wish-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
+}
+
+.wish-card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.wish-card.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.add-wish {
+    padding: 50px 0;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 150px;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.music-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.birthday-person {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+    color: #d4145a;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
+}
+
+.birthday-image-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 30px auto;
+    perspective: 1000px;
+}
+
+.image-fan {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: all 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+.image-fan img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    transition: all 0.5s ease;
+    transform-origin: center center;
+}
+
+.main-image {
+    z-index: 8;
+    width: 250px !important;
+    height: 250px !important;
+}
+
+.fan-image {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.birthday-image-container:hover .fan-image {
+    opacity: 1;
+    visibility: visible;
+}
+
+.birthday-image-container:hover .fan-image:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(0deg) translateY(-200px);
+}
+
+.birthday-image-container:hover .fan-image:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(51.5deg) translateY(-200px);
+}
+
+.birthday-image-container:hover .fan-image:nth-child(4) {
+    transform: translate(-50%, -50%) rotate(102.9deg) translateY(-200px);
+}
+
+.birthday-image-container:hover .fan-image:nth-child(5) {
+    transform: translate(-50%, -50%) rotate(154.3deg) translateY(-200px);
+}
+
+.birthday-image-container:hover .fan-image:nth-child(6) {
+    transform: translate(-50%, -50%) rotate(205.7deg) translateY(-200px);
+}
+
+.birthday-image-container:hover .fan-image:nth-child(7) {
+    transform: translate(-50%, -50%) rotate(257.1deg) translateY(-200px);
+}
+
+.birthday-image-container:hover .fan-image:nth-child(8) {
+    transform: translate(-50%, -50%) rotate(308.6deg) translateY(-200px);
+}
+
+.birthday-person {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: -60px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+    color: #d4145a;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
+    z-index: 10;
+}
+
+.image-gallery {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 10px 0;
+}
+
+.gallery-track {
+    display: flex;
+    animation: slideshow 40s linear reverse;
+}
+
+@keyframes slideshow {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-150px * 6)); /* Width of exactly one set of images */
+    }
+}
+
+.gallery-track img {
+    width: 130px;
+    height: 130px;
+    margin: 0 10px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+/* Add padding to main content to prevent overlap */
+.container {
+    padding-bottom: 170px;
+}
