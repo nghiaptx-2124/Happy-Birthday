@@ -93,10 +93,6 @@ document.head.appendChild(style);
 // Birthday wishes array with corresponding images
 const birthdayWishes = [
     {
-        text: "Chúc em sinh nhật vui vẻ, có thật nhiều niềm vui hơn và ý nghĩa hơn nữa. Chúc em sẽ tìm thấy thêm nhiều niềm đam mê mới ngoài công việc, cố gắng về sớm để tận hưởng thêm nhiều niềm vui khác nhó.🎈",
-        image: "partner/0.jpeg"
-    },
-    {
         text: "Hi mofumofu :waiwai:\nChúc mừng tuổi mới iemmmm, vừa có sự nghiêp, vừa có ngừi iu, ngừi iu thì tặng lun cái bịch shoppe ko gói, đồng nghịp thì cợt nhã mũi ngày, hở cái thì bịnh tật triền miên, đúng là hên lắm mới xui được như em :)))\nNói chớ thấy em đi làm đam mê zui zẻ hầu hạ khách khứa mỗi ngày, mọi người mí anh chị trong dự án (ý là a Nghĩa, c Ngọc, a Tún đồ đó), gồi mí anh chị đã rời dự án, chú En, chú bé Hả, em gái Thảo đồ, ai cũng quý mến zà iu thưn em hết mực nên c ga đi c cũng in lòng đôi chút :))\nChúc cho em gái c tuổi mới thật là rực rỡ, luôn hết mình & thiệt hạnh phúc trong mọi khoảnh khắc, work smarter & play harder (do work hard rồi nên ko chúc hard hơn được nè) .\nChúc em gái c có kháng sinh vững vàng, để xinh đẹp mạnh khoẻ để ăn đc nhìu món ngon mà hong bị rối loạn tiu hoá, tâm vững để hong bị chớm muộn phiền vì vài ba lời của khách hàng, sức vững để tái nạm vứi chị và cày thêm nhìu coan dự án mứi nhennnn\nいつもありがとう！ Lò vé diu, bé Chiu :heart:🌟",
         image: "partner/1.png"
     },
@@ -110,7 +106,7 @@ const birthdayWishes = [
     },
     {
         text: "✨Happy Birthday \"Nữ thần ngôn ngữ\" nhà ta ✨\nChúc mừng sinh nhật cô nàng xinh xắn, nhỏ nhẹ như làn gió đầu xuân, dịu keo như sương sớm và khéo léo như ninja (Nhanh nhẹn, linh hoạt, âm thầm mà hiệu quả cao) phiên dịch 😎✨\nHôm nay là ngày đặc biệt của chị em comtor có tiếng \"dịch 1 được 10\", vừa giỏi chuyên môn lại vừa được lòng toàn dân văn phòng – từ dev tới sếp, ai cũng mê!\nNhân dịp thêm tuổi mới:\nChúc nhan sắc thăng hạng mỗi ngày, đẹp như filter TikTok mà không cần app 📱💁‍♀️\nSức khỏe dồi dào như deadline cuối tháng – tới tấp mà vẫn \"sống khỏe\" 💪☘️\nTiền tài ào ào như bug spec – nhưng lần này là bug rớt tiền 💸💸\nDanh vọng bay xa như bản dịch mượt mà không sai dấu chấm phẩy 📝☀️\nChúc ngày hôm nay chị đẹp cười mỏi miệng vì quà, và năm nay là năm bung lụa, sống hết mình, vui hết nấc 🎁🎂✨\n— Tập thể fan hâm mộ âm thầm nhưng không giấu nổi sự ngưỡng mộ ",
-        image: "partner/4.jpeg"
+        image: "partner/4.png"
     },
     {
         text: "Hello c Phưn, lâu quá cuối cùng cũng tới sinh nhật rùi nè\nChúc c tuổi mới thăng hạng về nhan sắc, nâng cấp trong sự nghiệp, ngọt ngào ngọt ngào dí tìn iu. Chúc c thêm nhìu sức phẻ để tiếp tục dí đam mê, mà c cũng nhớ tự chăm sóc bản thân để phẻ phắn mạnh mẽ hơn nhaaa, c hong nhớ thì nhắc a nhà nhớ nhắc c thường xuyên dùm e ạ.\nHappy birthday c pằng chíu chíuuu 🥰 ",
@@ -122,11 +118,11 @@ const birthdayWishes = [
     },
     {
         text: "Hello Phưn cưng, lâu quá cuối cùng cũng tới sinh nhật rùi nè\nChúc cưng tuổi mới thăng hạng về nhan sắc, nâng cấp trong sự nghiệp, ngọt ngào ngọt ngào dí tìn iu. Chúc cưng thêm nhìu sức phẻ để tiếp tục dí đam mê, mà cưng cũng nhớ tự chăm sóc bản thân để phẻ phắn mạnh mẽ hơn nhaaa, cưng hong nhớ thì nhắc Lem Vĩnh Long nhắc cưng thường xuyên dùm nha ạ.\nHappy birthday cưng love you chụp chụp 🥰 🥰 🥰 ",
-        image: "partner/7.jpeg"
+        image: "partner/7.png"
     },
     {
         text: "Chúc mừng sinh nhật em! \n Luôn xinh đẹp luôn yêu đời và luôn tràn đầy năng lượng để hoàn thành xuất sắc công việc cũng như có thời gian chăm sóc bản thân và chăm sóc Lâm Lâm! \n Thêm tuổi mới thêm niềm vui mới, thêm hạnh phúc mới và thêm nhiều hoài bão mới. \n Chúc em hoàn thành tất cả các ước mơ của mình nhé. 🥰 ",
-        image: "partner/8.jpeg"
+        image: "partner/8.png"
     },
     {
         text: "Hôm nay sinh nhật đến rồi,\nChúc chị vui vẻ, rạng ngời như hoa.\nThông minh, duyên dáng thật thà,\nViệc gì cũng giỏi, mọi nhà đều khen!\nXinh xắn lại rất dễ thương,\nNhiệt tình công việc, chẳng vương nỗi buồn.\nTươi cười rạng rỡ mỗi hôm,\nMang theo năng lượng tỏa tròn khắp nơi.\nChúc chị tuổi mới tuyệt vời,\nSức khỏe dồi dào, thảnh thơi an lành.\nTình duyên như ý ngọt lành,\nCông danh tiến bước, lộc quanh suốt đời. 🥰 ",
