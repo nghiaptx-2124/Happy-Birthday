@@ -5,14 +5,21 @@
 }
 
 body {
-    background: linear-gradient(135deg, #ffd1dc 0%, #ffe5e5 50%, #fff0f5 100%);
+    background: linear-gradient(-45deg, #87CEEB, #a7e1f4, #c8ddeb, #9ebaeb);
     color: #333;
     font-family: 'Arial', sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
 }
 
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 /* Add cherry blossom petals */
 .petal {
     position: fixed;
@@ -384,4 +391,22 @@ button:hover {
 /* Add padding to main content to prevent overlap */
 .container {
     padding-bottom: 170px;
+}
+
+
+body.theme-ocean {
+    background: linear-gradient(135deg, #ffd1dc 0%, #ffe5e5 50%, #fff0f5 100%);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+.theme-ocean {
+    background: linear-gradient(-45deg, #87CEEB, #B0E0E6, #F0F8FF, #FFFFFF);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+@keyframes oceanBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }

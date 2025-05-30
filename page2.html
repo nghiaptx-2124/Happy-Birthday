@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body class="theme-sakura">
+    <audio id="bgMusic" loop>
+        <source src="member_2/audio_2.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <div class="music-control">
+        <button id="musicToggle">🎵 Play Music</button>
+    </div>
+
+    <div class="container">
+        <section class="intro">
+            <h1>Happy Birthday! 🎉</h1>
+            <div class="birthday-image-container">
+                <div class="image-fan">
+                    <img src="member_2/p1.jpg" alt="Birthday Person" class="main-image">
+                    <img src="member_2/p0.jpg" alt="Fan Image 0" class="fan-image">
+                    <img src="member_2/p7.jpg" alt="Fan Image 1" class="fan-image">
+                    <img src="member_2/p2.jpg" alt="Fan Image 2" class="fan-image">
+                    <img src="member_2/p3.jpg" alt="Fan Image 3" class="fan-image">
+                    <img src="member_2/p4.jpg" alt="Fan Image 4" class="fan-image">
+                    <img src="member_2/p5.jpg" alt="Fan Image 5" class="fan-image">
+                    <img src="member_2/p6.jpg" alt="Fan Image 6" class="fan-image">
+                </div>
+
+            </div>
+         
+        </section>
+
+        <section class="wishes-section">
+            <h2>Birthday Wishes</h2>
+            <div class="wishes-container" id="wishesContainer">
+                <!-- Wishes will be generated via JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+
+
+    <div class="image-gallery">
+        <div class="gallery-track">
+            <img src="member_2/p1.jpg" alt="Gallery Image 1">
+            <img src="member_2/p2.jpg" alt="Gallery Image 2">
+            <img src="member_2/p3.jpg" alt="Gallery Image 3">
+            <img src="member_2/p4.jpg" alt="Gallery Image 4">
+            <img src="member_2/p5.jpg" alt="Gallery Image 5">
+            <!-- Duplicate set for seamless loop -->
+            <img src="member_2/p1.jpg" alt="Gallery Image 1">
+            <img src="member_2/p2.jpg" alt="Gallery Image 2">
+            <img src="member_2/p3.jpg" alt="Gallery Image 3">
+            <img src="member_2/p4.jpg" alt="Gallery Image 4">
+            <img src="member_2/p5.jpg" alt="Gallery Image 5">
+             <!-- Duplicate set for seamless loop -->
+             <img src="member_2/p1.jpg" alt="Gallery Image 1">
+             <img src="member_2/p2.jpg" alt="Gallery Image 2">
+             <img src="member_2/p3.jpg" alt="Gallery Image 3">
+             <img src="member_2/p4.jpg" alt="Gallery Image 4">
+             <img src="member_2/p5.jpg" alt="Gallery Image 5">
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const birthdayWishes = [  // We will move this to individual HTML files
+    {
+        text: "Hê sờ lô c T-rinh, 1 năm qua đi tháng sinh nhật lại đến, chúc c tuổi mới sẽ đón thêm những điều mới mẻ, tươi đẹp, đi ngao du thêm nhìu nơi hơn nữa, có thêm nhìu ảnh/ video xịn xò up FB để e chiêm ngưỡng. Happy birthday c <3",
+        image: "partner/1.png"
+    },
+    {
+        text: "Happy Birthday! Mong bạn luôn giữ được tinh thần lạc quan, nụ cười tươi tắn và phong cách \‘rất gì và này nọ\’ nhé",
+        image: "partner/2.png"
+    },
+    {
+        text: "Hello bé Trinh,\nCô bé có dáng người tôi hằng ước ao, ước được dáng đẹp như Trinh, sinh nhật nhả vía cho mình đi.\nChúc bạn đón tuổi mới rực rỡ bên gia đình và nửa kia của mình nhó.\nMình luôn ấn tượng bởi sự chăm chỉ, hòa đồng của bạn. \nHappy birthday my friend <3",
+        image: "partner/3.png"
+    },
+    {
+        text: "Chúc Trinh sẽ sớm đi được 5 châu 4 biển, sang châu Âu, châu Mỹ, châu Phi, châu Đại Dương, châu Nam Cực, Bắc Cực....để du lịch lặn biển nhé :D",
+        image: "partner/4.png"
+    },
+    {
+        text: "Thêm một tuổi mới rồi đó, chúc bà vẫn cứ tươi không cần tưới, sống “quẩy” hết mình như đúng chất tháng 6 nắng vàng rực rỡ!\nTuổi 26 tới rồi, chúc bà:\n✨ Xinh như hoa, drama né xa\n🍰 Ăn không mập, ngủ không trễ\n🌈 Vui vẻ, yêu đời, chill tới nóc\n💖 Và hạnh phúc kiểu… không cần lý do! ",
+        image: "partner/5.png"
+    },
+    {
+        text: "Mừng thọ cô gái tháng 6! Cảm ơn vì luôn đồng hành cùng chị từ công việc đến ăn chơi, du lịch. Mong em luôn vui vẻ, xinh đẹp và cháy hết mình như mọi khi nhé! 🥳💖✈️",
+        image: "partner/6.png"
+    },
+    {
+        text: "Chúc bà có người iu như Byeon Woo-Seok nhóo :v",
+        image: "partner/7.png"
+    },
+    {
+        text: "Chúc mừng sinh nhật Chin Chin, chúc Chin tuổi mới gặt hái được nhiều thành công hơn nữa và quan trong luôn năng lượng và xinh đẹp mãi nhé.",
+        image: "partner/8.png"
+    },
+    {
+        text: "Chúc chị Trinh sinh nhật thật vui vẻ, luôn tươi cười với giọng cười đặc biệt của chị và giữ mãi nguồn năng lượng tích cực.",
+        image: "partner/9.png"
+    },
+    {
+        text: "Tuổi mới, chúc bạn luôn vui tươi như nắng sớm, rạng rỡ như hoa nở và đáng yêu như mèo con! 🐱",
+        image: "partner/10.png"
+    },
+    {
+        text: "chúc pé Trinh tuổi mới thiệt nhiều niềm vui, thành công, và có thêm nhiều chuyến lặn biển nữa nhé <3",
+        image: "partner/11.png"
+    },
+    {
+        text: "Chúc Trinh sinh nhật vui vẻ, tuổi +1 thì những điều tích cực khác cũng +1 hoặc hơn nhé (ví dụ như sức khỏe, tiền tài, công việc,... chồng..)",
+        image: "partner/12.png"
+    }
+];
+            createWishCards(birthdayWishes);
+            const oceanPetalTypes = ['🌊', '🌬️', '🐚', '🐠', '⛵'];
+            setInterval(() => createPetal(oceanPetalTypes), 200);
+        });
+    </script>
+</body>
+</html>

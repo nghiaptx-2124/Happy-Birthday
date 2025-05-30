@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body class="theme-ocean">
+    <audio id="bgMusic" loop>
+        <source src="./member_1/sunoaimusic.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <div class="music-control">
+        <button id="musicToggle">🎵 Play Music</button>
+    </div>
+
+    <div class="container">
+        <section class="intro">
+            <h1>Happy Birthday! 🎉</h1>
+            <div class="birthday-image-container">
+                <div class="image-fan">
+                    <img src="member_1/p1.jpg" alt="Birthday Person" class="main-image">
+                    <img src="member_1/p0.jpg" alt="Fan Image 0" class="fan-image">
+                    <img src="member_1/p7.jpg" alt="Fan Image 1" class="fan-image">
+                    <img src="member_1/p2.jpg" alt="Fan Image 2" class="fan-image">
+                    <img src="member_1/p3.jpg" alt="Fan Image 3" class="fan-image">
+                    <img src="member_1/p4.jpg" alt="Fan Image 4" class="fan-image">
+                    <img src="member_1/p5.jpg" alt="Fan Image 5" class="fan-image">
+                    <img src="member_1/p6.jpg" alt="Fan Image 6" class="fan-image">
+                </div>
+
+            </div>
+         
+        </section>
+
+        <section class="wishes-section">
+            <h2>Birthday Wishes</h2>
+            <div class="wishes-container" id="wishesContainer">
+                <!-- Wishes will be generated via JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+
+    <div class="image-gallery">
+        <div class="gallery-track">
+            <img src="member_1/p1.jpg" alt="Gallery Image 1">
+            <img src="member_1/p2.jpg" alt="Gallery Image 2">
+            <img src="member_1/p3.jpg" alt="Gallery Image 3">
+            <img src="member_1/p4.jpg" alt="Gallery Image 4">
+            <img src="member_1/p5.jpg" alt="Gallery Image 5">
+            <!-- Duplicate set for seamless loop -->
+            <img src="member_1/p1.jpg" alt="Gallery Image 1">
+            <img src="member_1/p2.jpg" alt="Gallery Image 2">
+            <img src="member_1/p3.jpg" alt="Gallery Image 3">
+            <img src="member_1/p4.jpg" alt="Gallery Image 4">
+            <img src="member_1/p5.jpg" alt="Gallery Image 5">
+             <!-- Duplicate set for seamless loop -->
+             <img src="member_1/p1.jpg" alt="Gallery Image 1">
+             <img src="member_1/p2.jpg" alt="Gallery Image 2">
+             <img src="member_1/p3.jpg" alt="Gallery Image 3">
+             <img src="member_1/p4.jpg" alt="Gallery Image 4">
+             <img src="member_1/p5.jpg" alt="Gallery Image 5">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Birthday wishes array with corresponding images
+const birthdayWishes = [  // We will move this to individual HTML files
+    {
+        text: "Hê sờ lô c M-Linh, 1 năm qua đi tháng sinh nhật lại đến, chúc c tuối mới vẫn xinh đẹp, tươi ngon, mướt mát như đó giờ (hoặc vượt xa lun càng đã). Chúc c có thêm nhìu niềm zui từ công việc tới cả cuộc sống. Happy birthday c 🌸",
+        image: "partner/1.png"
+    },
+    {
+        text: "Chúc chị sinh nhật vui vẻ, luôn xinh đẹp, hạnh phúc và thành công trong cuộc sống cũng như công việc",
+        image: "partner/2.png"
+    },
+    {
+        text: "Dear người chị guột của em.\nNhân dịp chị \"lại thêm\" một tuổi, em chúc chị chân cứng đá mềm trên đường đời không vấp ngã, luôn vui tươi và sớm cho một nửa của mình đi ạ, hứa đi đám cưới bằng hiện kim hí hí.\nI love you so muchhhh and forever <3",
+        image: "partner/3.png"
+    },
+    {
+        text: "Chúc Linh sẽ có một anh người yêu, một người chồng tương lai là nhiếp ảnh gia để chụp ảnh du lịch thật xịn xò cho Linh :D ",
+        image: "partner/4.png"
+    },
+    {
+        text: "Chúc mừng sinh nhật cô gái Cự Giải tháng 6 lúc nhẹ nhàng tinh tế lúc thì mạnh mẽ. Gần 5 năm đồng hành cùng em, lúc gần lúc xa, lúc vui, lúc xì stress, lúc ngây ngô, lúc 'trưởng thành' hơn. Chúc tuổi mới thật nhiều may mắn, nhiều năng lượng để tới gần hơn những mục tiêu, những mong đợi của em. Mong em luôn giữ được trái tim ấm áp, vẫn luôn vui vẻ như em vẫn thế nhé! 🎂🦀💫 ",
+        image: "partner/5.png"
+    },
+    {
+        text: "Toi khum bt chúc gì cả, thoi thì chúc bà có người iu như Park Bo Gum nhóoo :v",
+        image: "partner/6.png"
+    },
+    {
+        text: "Happy birthday Mỹ Linh, chúc Mỹ Linh tuổi mới ngày càng xinh đẹp hơn và mau giàu nhé.",
+        image: "partner/7.png"
+    },
+    {
+        text: "Tuổi mới đến rồi, chúc chị Linh luôn dõng dạc và cãi nhau chem chẽm với các anh dev nha.",
+        image: "partner/9.png"
+    },
+    {
+        text: "Tuổi mới chúc bạn mỗi ngày đều cười như vừa trúng số, ngủ ngon như mèo con, và ăn ngon như chưa từng biết no!",
+        image: "partner/10.png"
+    },
+    {
+        text: "chúc pé Linh tuổi mới luôn vui vẻ, thành công vứi đi làm hong buồn ngủ nữaaaa nhaaaa :D",
+        image: "partner/11.png"
+    },
+    {
+        text: "Ko lói nhìu. Chúc chị tuổi mới rực rỡ, vạn sự như ý vạn điều bình an, cung hỷ cung hỷ !!! <3",
+        image: "partner/12.png"
+    }
+];
+            createWishCards(birthdayWishes);
+             // Use default petal types for index.html
+            const defaultPetalTypes = ['🌸', '🎀', '💮']; 
+            setInterval(() => createPetal(defaultPetalTypes), 200); // Or setInterval(() => createPetal(), 200);
+        });
+    </script>
+</body>
+</html>
