@@ -42,6 +42,16 @@
                 <!-- Wishes will be generated via JavaScript -->
             </div>
         </section>
+
+        <section class="navigate">
+            <div class="navigation-button" style="text-align: center; margin: 20px 0; position: sticky; bottom: 40px; z-index: 1000;">
+                <a href="page1.html" class="cloud-button" style="display: inline-block; padding: 15px 30px; font-size: 1.2em; color: #333; background: white; border: none; border-radius: 50px; cursor: pointer; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), inset 0 -3px 10px rgba(0, 0, 0, 0.1); font-weight: 500; letter-spacing: 0.5px; position: relative;">
+                    <span style="position: relative; z-index: 1;">Đến vùng đất kế tiếp</span>
+                    <div style="position: absolute; top: -15px; left: 15px; width: 30px; height: 30px; background: white; border-radius: 50%; box-shadow: 50px -5px 0 10px white, 25px -25px 0 8px white, 75px -15px 0 12px white;"></div>
+                </a>
+            </div>
+        </section>
+    
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
@@ -69,6 +79,9 @@
              <img src="member_2/p5.jpg" alt="Gallery Image 5">
         </div>
     </div>
+
+
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const birthdayWishes = [  // We will move this to individual HTML files

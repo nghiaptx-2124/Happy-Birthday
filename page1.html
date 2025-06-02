@@ -42,6 +42,16 @@
                 <!-- Wishes will be generated via JavaScript -->
             </div>
         </section>
+        <section class="navigate">
+            <div class="navigation-button" style="text-align: center; margin: 20px 0; position: sticky; bottom: 40px; z-index: 1000;">
+                <a href="page2.html" class="cloud-button" style="display: inline-block; padding: 15px 30px; font-size: 1.2em; color: #333; background: white; border: none; border-radius: 50px; cursor: pointer; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), inset 0 -3px 10px rgba(0, 0, 0, 0.1); font-weight: 500; letter-spacing: 0.5px; position: relative;">
+                    <span style="position: relative; z-index: 0;">Đến vùng đất kế tiếp</span>
+                    <div style="position: absolute; top: -15px; left: 15px; width: 30px; height: 30px; background: white; border-radius: 50%; box-shadow: 50px -5px 0 10px white, 25px -25px 0 8px white, 75px -15px 0 12px white;"></div>
+                </a>
+            </div>
+        </section>
+       
+       
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
@@ -69,6 +79,9 @@
         </div>
     </div>
 
+
+
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Birthday wishes array with corresponding images
@@ -90,16 +103,20 @@ const birthdayWishes = [  // We will move this to individual HTML files
         image: "partner/4.png"
     },
     {
-        text: "Chúc mừng sinh nhật cô gái Cự Giải tháng 6 lúc nhẹ nhàng tinh tế lúc thì mạnh mẽ. Gần 5 năm đồng hành cùng em, lúc gần lúc xa, lúc vui, lúc xì stress, lúc ngây ngô, lúc 'trưởng thành' hơn. Chúc tuổi mới thật nhiều may mắn, nhiều năng lượng để tới gần hơn những mục tiêu, những mong đợi của em. Mong em luôn giữ được trái tim ấm áp, vẫn luôn vui vẻ như em vẫn thế nhé! 🎂🦀💫 ",
+        text: "Chúc chị bước sang tuổi mới luôn xinh đẹp – tự tin – rạng ngời như ánh nắng tháng 6!\nTuổi 27 rồi, cứ sống hết mình, yêu đời, và tận hưởng những điều tuyệt vời nhất mà cuộc sống mang lại nha.\n\nChúc chị có một năm ngập tràn:\n💖 Niềm vui không lý do\n🍰 Bánh ngọt không cần chia\n🎶 Giai điệu vui vẻ mỗi sáng thức dậy\n✨ Và những chuyến đi bất ngờ đầy kỷ niệm\n\nTuổi mới, không cần quá hoàn hảo – chỉ cần đủ bình yên, vui vẻ và thật là chill.\n\nChúc chị một sinh nhật thiệt ấm áp và đáng nhớ! 🌸🥂",
         image: "partner/5.png"
     },
     {
-        text: "Toi khum bt chúc gì cả, thoi thì chúc bà có người iu như Park Bo Gum nhóoo :v",
+        text: "Chúc mừng sinh nhật cô gái Cự Giải tháng 6 lúc nhẹ nhàng tinh tế lúc thì mạnh mẽ. Gần 5 năm đồng hành cùng em, lúc gần lúc xa, lúc vui, lúc xì stress, lúc ngây ngô, lúc 'trưởng thành' hơn. Chúc tuổi mới thật nhiều may mắn, nhiều năng lượng để tới gần hơn những mục tiêu, những mong đợi của em. Mong em luôn giữ được trái tim ấm áp, vẫn luôn vui vẻ như em vẫn thế nhé! 🎂🦀💫",
         image: "partner/6.png"
     },
     {
-        text: "Happy birthday Mỹ Linh, chúc Mỹ Linh tuổi mới ngày càng xinh đẹp hơn và mau giàu nhé.",
+        text: "Toi khum bt chúc gì cả, thoi thì chúc bà có người iu như Park Bo Gum nhóoo :v",
         image: "partner/7.png"
+    },
+    {
+        text: "Happy birthday Mỹ Linh, chúc Mỹ Linh tuổi mới ngày càng xinh đẹp hơn và mau giàu nhé.",
+        image: "partner/8.png"
     },
     {
         text: "Tuổi mới đến rồi, chúc chị Linh luôn dõng dạc và cãi nhau chem chẽm với các anh dev nha.",
